@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch top 10 cryptocurrencies
     async function fetchCryptoData() {
         try {
-            const response = await fetch('/api/getTop10');
+            const response = await fetch('https://hodlinfo-nkqv.onrender.com/');
             const data = await response.json();
 
             // Example base price for calculating difference and savings
