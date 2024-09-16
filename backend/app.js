@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const axios = require('axios');
-const Crypto = require('./models/Crypto');
+const Crypto = require('./Crypto');
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.get('/sw.js', (req, res) => {
 });
 
 // Use routes from index.js
-app.use('/', require('./routes/index'));
+app.use('/', require('../../routes/index'));
 
 // Serve the telegram.html file
 app.get('/connect/telegram', (req, res) => {
