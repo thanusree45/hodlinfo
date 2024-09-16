@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
-const Crypto = require('../backend/models/Crypto');
+const Crypto = require('../models/Crypto');
 
 // Route to render index.html
 router.get('/', (req, res) => {

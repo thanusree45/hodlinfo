@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const axios = require('axios');
-const Crypto = require('./Crypto');
+const Crypto = require(path.join(__dirname, 'models', 'Crypto.js'));
+
 
 const app = express();
 
@@ -19,14 +20,14 @@ app.get('/sw.js', (req, res) => {
 });
 
 // Use routes from index.js
-app.use('/', require('../../routes/index'));
+app.use('/', require('./routes/index')); // Ensure this path is correct
 
 // Serve the telegram.html file
 app.get('/connect/telegram', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'telegram.html'));
 });
 
-// Serve files from 'views' directory
+// Serve the index.html file
 app.get('/views/index.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
