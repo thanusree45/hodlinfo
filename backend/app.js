@@ -3,6 +3,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const axios = require('axios');
 const Crypto = require(path.join(__dirname, 'models', 'Crypto.js'));
+const cors = require('cors');
+app.use(cors());
 
 
 const app = express();
@@ -33,7 +35,7 @@ app.get('/views/index.html', (req, res) => {
 });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/hodlinfo')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/hodlinfo')
   .then(() => {
     console.log('MongoDB connected...');
     // Start fetching data every 5 minutes
