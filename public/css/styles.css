@@ -1,0 +1,481 @@
+/* Base Reset */
+html {
+    scroll-behavior: smooth;
+  }
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #030418;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #080a29;
+    flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+}
+
+.header-image {
+    height: 40px;
+    width: 150px; /* Adjust as needed */
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller devices */
+    justify-content: flex-end;
+    flex-grow: 1; /* Take up available space */
+}
+
+.nav-buttons button {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: #bcbcbc;
+}
+#buy-button {
+    padding: 10px 20px; /* Adjust padding to maintain size */
+    max-width: 150px; /* Set a maximum width */
+    width: 100%; /* Allow it to be responsive */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+main {
+    padding: 20px;
+}
+
+/* General button styling */
+.btn {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.dropdown-menu {
+    min-width: 100px;
+    display: block;
+}
+
+
+/* Theme Toggle */
+.theme-toggle-container {
+    display: flex;
+    
+    padding: 10px;
+}
+
+.theme-toggle-button {
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    width: 50px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-button:focus {
+    outline: none;
+}
+
+.theme-toggle-icon {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-color: #3dc6c1;
+    border-radius: 60%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-button.active .theme-toggle-icon {
+    transform: translateX(25px); /* Move the icon to the right when active */
+}
+/* Optional: Add styles for different themes */
+body.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-theme {
+    background-color: #0c0f48;
+    color: #fff;
+}
+.timer-container {
+    display: flex;
+    position: relative;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+}
+
+.CircularProgressbar {
+    width: 100%;
+    height: 100%;
+}
+
+.CircularProgressbar-trail {
+    stroke: #bcbcbc;
+    stroke-width: 5px;
+}
+
+.CircularProgressbar-path {
+    stroke: #3dc6c1; /* Border color when filling */
+    stroke-width: 8px;
+    stroke-dasharray: 289.027px; /* Adjust this value based on the circle size */
+    stroke-dashoffset: 0px;
+    animation: fill 60s linear infinite; /* Duration should match countdown time */
+}
+
+.CircularProgressbar-text {
+    font-size: 2.2em;
+    font-weight: bold;
+    fill: #3dc6c1; /* Text color should match the border color */
+}
+
+
+/* Adjust dropdown menu positioning if needed */
+.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+
+/* Price Details */
+.price-details {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.change-percentages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.change-percentages div {
+    text-align: center;
+    margin: 0 10px;
+    flex: 1; 
+}
+
+.percent {
+    font-size: 24px;
+    color: #3dc6c1;
+    font-weight: bold;
+}
+
+.best-price {
+    font-size: 22px;
+    color: #999;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.centered-main {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    flex-direction: column;  /* Arrange children in a column */
+    min-height: 100vh; 
+    font: "Oswald";      /* Full viewport height */
+}
+.telegram-header{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.telegram-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;      /* Center text */
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  /* Center items horizontally */
+}
+.telegram-txt {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.telegram-logo {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+#connect-telegram:focus,
+#connect-telegram:active {
+    outline: none;
+    box-shadow: none;
+}
+#connect-telegram{
+    background-color: #3dc6c1;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Table Design */
+table {
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border-bottom: none;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    font-size: 16px;
+    font-weight: bold;
+    color: #888686;
+    background-color: transparent;
+}
+
+td {
+    background-color: #6e6a6a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+table td.positive {
+    color: #3dc6c1;
+}
+
+table td.negative {
+    color: #f44336;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-theme header {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.light-theme .nav-buttons button {
+    background-color: #ddd;
+    color: #000;
+}
+
+body.light-theme table {
+    background-color: #e0e0e0;
+    color: #5e5959;
+}
+
+body.light-theme table th {
+    background-color: #d1d1d1;
+    color: #615b5b;
+}
+
+body.light-theme table td {
+    color: #585252;
+}
+.add-btn {
+    display: block;
+    background-color: transparent;
+    color: #3dc6c1;
+    border: 2px solid #3dc6c1;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer; 
+    padding: 10px;
+    font-size: 16px; 
+}
+.add-btn.hover {
+    background-color: #3dc6c1;
+    color: white; 
+}
+
+#add-footer{
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 60px; 
+    z-index: 1000;
+}
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 60px; 
+    z-index: 1000; 
+}
+
+
+/* Responsive Design */
+/* Mobile (up to 600px width) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-image {
+        margin-bottom: 10px; /* Add spacing below the logo */
+        width: 120px; /* Adjust logo size for small screens */
+    }
+
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #buy-button {
+        padding: 8px 15px; /* Reduce padding for smaller screens */
+        max-width: 120px; /* Limit max width on smaller devices */
+        font-size: 12px; /* Reduce font size for better fit */
+    }
+    .price-details,
+    .change-percentages {
+        flex-direction: column;  /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .best-price h2 {
+        font-size: 18px;
+    }
+
+    .best-price p {
+        font-size: 32px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    table th:nth-child(4),
+    table td:nth-child(4),
+    table th:nth-child(6),
+    table td:nth-child(6) {
+        display: none; /* Hide Buy/Sell and Savings for small screens */
+    }
+}
+
+/* Tablet (601px - 1024px width) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header-image {
+        width: 140px; /* Slightly smaller logo on tablets */
+    }
+
+    .nav-buttons {
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .best-price h2 {
+        font-size: 20px;
+    }
+
+    .best-price p {
+        font-size: 40px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Laptop (1025px and wider) */
+@media (min-width: 1025px) {
+    .header-image {
+        width: 180px;
+    }
+
+    .nav-buttons {
+        justify-content: flex-end;
+    }
+    .change-percentages{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+    }
+    .best-price h2 {
+        font-size: 22px;
+    }
+
+    .best-price p {
+        font-size: 48px;
+    }
+
+    table th, table td {
+        font-size: 16px;
+    }
+}
+
+

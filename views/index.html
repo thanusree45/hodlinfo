@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodlinfo - Best Price</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="manifest" href="/manifest.json">
+
+</head>
+<body>
+    <header>
+        <img src="/images/icons/hodlinfo-txt.png" alt="header-image" class="header-image">
+        <div class="nav-buttons">
+            <div class="dropdown" id="currencyDropdownContainer">
+                <button type="button" class="btn btn-secondary dropdown-toggle" id="currencyDropdown" aria-haspopup="true" aria-expanded="false">
+                    INR
+                </button>
+                <div class="dropdown-menu" aria-labelledby="currencyDropdown">
+                    <a class="dropdown-item" href="#" data-currency="INR">INR</a>
+                    <a class="dropdown-item" href="#" data-currency="USD">USD</a>
+                </div>
+            </div>
+            <div class="dropdown" id="cryptoDropdownContainer">
+                <button type="button" class="btn btn-secondary dropdown-toggle" id="cryptoDropdown" aria-haspopup="true" aria-expanded="false">
+                    BTC
+                </button>
+                <div class="dropdown-menu" aria-labelledby="cryptoDropdown">
+                    <a class="dropdown-item" href="#" data-crypto="BTC">BTC</a>
+                    <a class="dropdown-item" href="#" data-crypto="ETH">ETH</a>
+                    <a class="dropdown-item" href="#" data-crypto="USDT">USDT</a> 
+                    <a class="dropdown-item" href="#" data-crypto="XRP">XRP</a> 
+                    <a class="dropdown-item" href="#" data-crypto="TRX">TRX</a>
+                     <a class="dropdown-item" href="#" data-crypto="DASH">DASH</a>
+                      <a class="dropdown-item" href="#" data-crypto="ZEC">ZEC</a>
+                      <a class="dropdown-item" href="#" data-crypto="XEM">XEM</a> 
+                      <a class="dropdown-item" href="#" data-crypto="IOST">10ST</a> 
+                      <a class="dropdown-item" href="#" data-crypto="MIN">MIN</a> 
+                      <a class="dropdown-item" href="#" data-crypto="BTT">BTT</a>
+                       <a class="dropdown-item" href="#" data-crypto="WRX">WRX</a>
+                </div>
+            </div>
+            <button id="buy-button" class="btn btn-primary">Buy BTC</button>
+
+            <div class="timer-container">
+                <div class="progress-bar-wrapper">
+                    <svg class="CircularProgressbar" viewBox="0 0 100 100" data-test-id="CircularProgressbar">
+                        <path class="CircularProgressbar-trail" d="M 50,50 m0,-46 a 46,45 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+                            stroke-width="8" fill-opacity="0"></path>
+                        <path class="CircularProgressbar-path" d="M 50,50 m0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+                            stroke-width="8" fill-opacity="0"></path>
+                        <text class="CircularProgressbar-text" x="50" y="50" text-anchor="middle" dy=".3em" id="timer">60</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="telegram-1-section">
+                <button id="connect-telegram" class="telegram-btn">
+                    <img src="images/icons/telegram-logo.png" alt="Telegram" class="telegram-logo"/>
+                    Connect Telegram
+                </button>                
+            </div>     
+            <div class="theme-toggle-container">
+                <button id="theme-toggle" class="theme-toggle-button">
+                    <span class="theme-toggle-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="price-details">
+            <div class="change-percentages">
+                <div>
+                    <p class="percent">0.1%</p>
+                    <p>5 Mins</p>
+                </div>
+                   
+                <div>
+                    <p class="percent">0.96%</p>
+                    <p>1 Hour</p>
+                </div>
+                <div>
+                    <h6 id="best-price">Best Price to Trade</h6>
+                    <h1 >₹ 26,56,110</h1>
+                    <small>Average BTC/INR net price including commission</small>
+                </div> 
+                <div>
+                    <p class="percent">2.73%</p>
+                    <p>1 Day</p>
+                </div>
+                <div>
+                    <p class="percent">7.51%</p>
+                    <p>7 Days</p>
+                </div>
+            </div>
+            
+        </div>
+        </section>
+
+        <section class="price-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Platform</th>
+                        <th>Last Traded Price</th>
+                        <th>Buy/Sell Price</th>
+                        <th>Difference</th>
+                        <th>Savings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <footer id="add-footer">
+        <button class="add-btn" id="add-to-home-screen" >Add Hodlinfo to Home Screen</button>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with HodlInfo on Telegram</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+
+<body class="dark-theme"> <!-- Set default theme here -->
+    <header class="telegram-header">
+        <img id="home-image" src="/images/icons/hodlinfo-txt.png" alt="Join Telegram" class="header-image">
+        <div class="nav-buttons">
+            <button id="theme-toggle" class="theme-toggle-button">
+                <div class="theme-toggle-icon"></div>
+            </button>
+        </div>
+    </header>
+
+    <main class="centered-main">
+        <section>
+            <div class="telegram-section">
+                <h1>
+                    Connect <img src="/images/icons/telegram-logo.png" alt="telegram-logo" class="telegram-logo"/> Telegram
+                </h1>
+                <h2>Add Bot to Your Group</h2>
+                <p><strong>Manual:</strong></p>
+                <ul>
+                    <li>1. Open the Telegram app.</li>
+                    <li>2. Open the group you want to add the bot to.</li>
+                    <li>3. Click on add members in group settings.</li>
+                    <li>4. Search <code>@HodlInfoBot</code> and click it.</li>
+                </ul>
+                <p><strong>Automatic:</strong></p>
+                <p>Go to:</p>
+                <a href="https://t.me/HodlInfoBot?startgroup=true" target="_blank" class="telegram-txt">
+                    https://t.me/HodlInfoBot?startgroup=true
+                </a>
+                <h2>Chat with the Bot</h2>
+                <p><strong>Manual:</strong></p>
+                <ul>
+                    <li>1. Open the Telegram app.</li>
+                    <li>2. Click on the new message button.</li>
+                    <li>3. In the search bar, type <code>@HodlInfoBot</code>.</li>
+                    <li>4. Click on <code>@HodlInfoBot</code>.</li>
+                </ul>
+                <p><strong>Automatic:</strong></p>
+                <p>Go to :</p> 
+                <a href="https://t.me/HodlInfoBot" target="_blank" class="telegram-txt">
+                    https://t.me/HodlInfoBot
+                </a>
+                
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <button class="add-btn" id="add-to-home-screen">Add Hodlinfo to Home Screen</button>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+        // Define the URL in a variable
+        const homePageUrl = '/'; 
+
+        // Add event listener to the image
+        document.getElementById('home-image').addEventListener('click', () => {
+            window.location.href = homePageUrl; // Navigate to the URL stored in the variable
+        });
+    </script>
+</body>
+</html>
