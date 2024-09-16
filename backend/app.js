@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 const Crypto = require(path.join(__dirname, 'models', 'Crypto.js'));
 const cors = require('cors');
-app.use(cors());
-
+require('dotenv').config(); // Load environment variables from .env
 
 const app = express();
+app.use(cors());
 
 // Middleware for serving static files
 app.use(express.static(path.join(__dirname, 'public'))); // Serves files from the 'public' folder
@@ -34,8 +34,11 @@ app.get('/views/index.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/hodlinfo')
+// Connect to MongoDB Atlas
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => {
     console.log('MongoDB connected...');
     // Start fetching data every 5 minutes
