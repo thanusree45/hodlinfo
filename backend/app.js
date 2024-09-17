@@ -34,6 +34,16 @@ app.get('/views/index.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
+app.get('/api/getTop10', async (req, res) => {
+  try {
+    const top10Cryptos = await Crypto.find().limit(10).sort({ last: -1 });
+    res.json(top10Cryptos); // Return the top 10 cryptos in JSON format
+  } catch (error) {
+    console.error('Error fetching top 10 cryptos:', error);
+    res.status(500).json({ message: 'Error fetching data' });
+  }
+});
+
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
